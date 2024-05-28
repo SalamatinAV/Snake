@@ -1,0 +1,11 @@
+<div class="border-game" tabindex="0" (keydown)="keydown($event)" #gameBorder>
+  <div
+    class="pixel"
+    *ngFor="let element of pixel"
+    [ngClass]="{
+      snake: isSnake(element),
+      food: isFood(element),
+      head: isHead(element)
+    }"
+  ></div>
+</div>
